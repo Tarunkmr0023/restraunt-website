@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a38756ce.css",
+    "main.js": "/static/js/main.aa035435.js",
+    "static/js/453.970027f8.chunk.js": "/static/js/453.970027f8.chunk.js",
+    "static/media/ButterChicken.jpg": "/static/media/ButterChicken.c99c94aa0f3601d7a47b.jpg",
+    "static/media/ChickenSeekhKebab.jpg": "/static/media/ChickenSeekhKebab.6ce1aedd81932b066b9e.jpg",
+    "static/media/Background.jpg": "/static/media/Background.f0c3b6ff8210df610963.jpg",
+    "static/media/ChickenChangezi.jpg": "/static/media/ChickenChangezi.5f30668d50516ed0f5fc.jpg",
+    "static/media/ChickenTandoori.jpg": "/static/media/ChickenTandoori.8d6471e8a8620a8efc59.jpg",
+    "static/media/ChickenTikka.jpg": "/static/media/ChickenTikka.e580fcb3127d058712c4.jpg",
+    "static/media/ChickenFry.jpg": "/static/media/ChickenFry.8be39d3b339ac8c95657.jpg",
+    "static/media/TandooriRoti.jpg": "/static/media/TandooriRoti.7610656e8068a21dc12e.jpg",
+    "static/media/EggCurry.jpg": "/static/media/EggCurry.24eb154484f142085f52.jpg",
+    "index.html": "/index.html",
+    "main.a38756ce.css.map": "/static/css/main.a38756ce.css.map",
+    "main.aa035435.js.map": "/static/js/main.aa035435.js.map",
+    "453.970027f8.chunk.js.map": "/static/js/453.970027f8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a38756ce.css",
+    "static/js/main.aa035435.js"
+  ]
+}
