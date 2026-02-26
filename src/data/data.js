@@ -13,16 +13,16 @@ export const MenuList = [
         description: "A type of curry made from chicken with a spiced tomato and butter (makhan) sauce",
         image: ButterChicken,
         QuarterPrice: 180,
-        HalfPrice: 350,
-        FullPrice: 700
+        HalfPrice: 360,
+        FullPrice: 720
     },
     {
         name: 'Chicken Changezi',
         description: "Chicken Changezi is a delicious and aromatic curry that hails from the culinary traditions of the Mughal era in India",
         image: ChickenChangezi,
         QuarterPrice: 160,
-        HalfPrice: 300,
-        FullPrice: 600
+        HalfPrice: 320,
+        FullPrice: 640
     },
     {
         name: 'Chicken Fry',
@@ -45,8 +45,8 @@ export const MenuList = [
         description: "Small pieces of boneless chicken baked using skewers on a brazier called angeethi or over charcoal after marinating in Indian spices and dahi (yogurt)",
         image: ChickenTikka,
         QuarterPrice: 180,
-        HalfPrice: 350,
-        FullPrice: 700
+        HalfPrice: 360,
+        FullPrice: 720
     },
     {
         name: 'Chicken Seekh Kebab',
