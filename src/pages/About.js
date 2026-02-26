@@ -1,51 +1,126 @@
-import React from 'react'
-import Layout from '../components/Layout/Layout'
-import { Box, Typography } from '@mui/material'
+import React from "react";
+import Layout from "../components/Layout/Layout";
+import { Box, Typography, Divider } from "@mui/material";
+import Banner from "../images/ChickenFeast.png"; // You can change image
 
 const About = () => {
-    return (
-        <Layout>
-            <Box sx={{
-                my: 12,
-                textAlign: "center",
-                p: 2,
-                "& h4": {
-                    fontWeight: "bold",
-                    my: 2,
-                    fontSize: "2rem",
-                    background: "linear-gradient(90deg, rgba(17,158,146,1) 0%, rgba(9,121,100,1) 51%, rgba(0,255,250,1) 100%)",
-                    borderRadius: "10px"
-                },
-                "& p": {
-                    textAlign: "justify",
-                    fontWeight: "bold"
-                },
-                "@media (max-width:600px)": {
-                    mt: 0,
-                    mb: 3,
-                    "& h4": {
-                        fontSize: "1.5rem"
-                    },
-                    "& p": {
-                        fontSize: "1rem"
-                    },
-                }
-            }}>
-                <Typography variant="h4">Welcome to Chicken Point</Typography>
-                <p>
-                    A hidden gem nestled in North East Delhi that promises a culinary delight for all chicken enthusiasts. At our restaurant, we pride ourselves on delivering the best Tandoori Chicken in the area, prepared with utmost care and perfection. Our Tandoori Chicken is charcoal roasted to achieve a mouthwatering level of tenderness and juiciness, making every bite a heavenly experience. Accompanied by soft Tandoori Roti, crisp Laccha Onions, and a refreshing dash of Mint Chutney, our Tandoori Chicken stands out as a must-try for non-vegetarians seeking exceptional flavors.
-                </p>
-                <br />
-                <p>
-                    In addition to our renowned Tandoori Chicken, our menu features a delectable range of chicken dishes. Savor the succulent Chicken Tikka, which is served with a side of cool curd and vibrant mint chutney, creating a harmonious blend of flavors that will tantalize your taste buds. For those who enjoy a bit of crunch, our Fried Chicken offers a crispy exterior while maintaining a juicy interior. And if you're looking for something uniquely flavorful, our Chicken Changezi is a standout choice, paired perfectly with Tandoori Roti.
-                </p>
-                <br />
-                <p>
-                    We understand that great food is not just about the main dishes, so we also offer a savory Egg Curry that complements our menu and adds variety for those who enjoy a blend of egg and spices. At High on Chicken, every meal is crafted with passion and dedication, ensuring that each visit is an unforgettable experience. Whether you're a devoted chicken lover or someone exploring new flavors, our restaurant promises a feast that will keep you coming back for more. Join us for a dining experience that truly celebrates the art of chicken cuisine in a cozy and inviting atmosphere.
-                </p>
-            </Box>
-        </Layout>
-    )
-}
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <Box
+        sx={{
+          textAlign: "center",
+          mt: 8,
+        }}
+      >
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: "bold",
+            display: "inline-block",
+          }}
+        >
+          Welcome to Chicken Point
+        </Typography>
 
-export default About
+        {/* Underline */}
+        <Box
+          sx={{
+            width: "70px",
+            height: "4px",
+            backgroundColor: "#e23744",
+            mx: "auto",
+            mt: 1,
+            borderRadius: 2,
+          }}
+        />
+      </Box>
+
+      {/* Image Section */}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          mt: 5,
+          px: 2,
+        }}
+      >
+        <Box
+          component="img"
+          src={Banner}
+          alt="Chicken Point"
+          sx={{
+            width: { xs: "100%", md: "70%" },
+            height: "300px",
+            objectFit: "cover",
+            borderRadius: 4,
+            boxShadow: 5,
+          }}
+        />
+      </Box>
+
+      {/* Content Section */}
+      <Box
+        sx={{
+          maxWidth: "900px",
+          mx: "auto",
+          mt: 6,
+          mb: 10,
+          px: 3,
+        }}
+      >
+        <Typography
+          variant="body1"
+          sx={{
+            mb: 3,
+            lineHeight: 1.8,
+            fontSize: "1.1rem",
+            color: "#444",
+          }}
+        >
+          A hidden gem nestled in North East Delhi that promises a culinary delight for all chicken lovers. At our restaurant, we proudly serve the <b style={{ color: "#e23744" }}>best Tandoori Chicken</b> in the area, charcoal roasted to perfection for unmatched tenderness and juiciness.
+        </Typography>
+
+        <Typography
+          variant="body1"
+          sx={{
+            mb: 3,
+            lineHeight: 1.8,
+            fontSize: "1.1rem",
+            color: "#444",
+          }}
+        >
+          Enjoy it with soft Tandoori Roti, crisp Laccha Onions, and refreshing Mint Chutney — a combination that creates a heavenly dining experience. Our menu also features mouthwatering <b style={{ color: "#e23744" }}>Chicken Tikka, Fried Chicken, and Chicken Changezi</b>, each prepared with passion and authentic flavors.
+        </Typography>
+
+        <Typography
+          variant="body1"
+          sx={{
+            lineHeight: 1.8,
+            fontSize: "1.1rem",
+            color: "#444",
+          }}
+        >
+          At Chicken Point, every dish is crafted with dedication to deliver rich taste and quality. Whether you're a devoted non-vegetarian or exploring bold flavors, we promise a dining experience that keeps you coming back for more.
+        </Typography>
+
+        <Divider sx={{ mt: 5 }} />
+
+        {/* Closing Statement */}
+        <Typography
+          variant="h6"
+          sx={{
+            textAlign: "center",
+            mt: 4,
+            fontWeight: "bold",
+            color: "#e23744",
+          }}
+        >
+          Taste the Tradition. Feel the Flavor.
+        </Typography>
+      </Box>
+    </Layout>
+  );
+};
+
+export default About;
