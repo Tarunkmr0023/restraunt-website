@@ -13,8 +13,8 @@ export const MenuList = [
         description: "A type of curry made from chicken with a spiced tomato and butter (makhan) sauce",
         image: ButterChicken,
         QuarterPrice: 180,
-        HalfPrice: 360,
-        FullPrice: 720
+        HalfPrice: 350,
+        FullPrice: 700
     },
     {
         name: 'Chicken Changezi',
@@ -22,7 +22,7 @@ export const MenuList = [
         image: ChickenChangezi,
         QuarterPrice: 160,
         HalfPrice: 320,
-        FullPrice: 640
+        FullPrice: 620
     },
     {
         name: 'Chicken Fry',
@@ -37,16 +37,16 @@ export const MenuList = [
         description: "A dish made from chicken marinated in yogurt and spices and roasted in a tandoor, a cylindrical clay oven",
         image: ChickenTandoori,
         QuarterPrice: 130,
-        HalfPrice: 260,
-        FullPrice: 520
+        HalfPrice: 250,
+        FullPrice: 500
     },
     {
         name: 'Chicken Tikka',
         description: "Small pieces of boneless chicken baked using skewers on a brazier called angeethi or over charcoal after marinating in Indian spices and dahi (yogurt)",
         image: ChickenTikka,
         QuarterPrice: 180,
-        HalfPrice: 360,
-        FullPrice: 720
+        HalfPrice: 350,
+        FullPrice: 700
     },
     {
         name: 'Chicken Seekh Kebab',
@@ -60,9 +60,9 @@ export const MenuList = [
         name: 'Egg Curry',
         description: "Egg curry is a comforting Indian dish of curried eggs, basically made with hard boiled eggs, onions, tomatoes, whole & ground spices and herbs",
         image: EggCurry,
-        QuarterPrice: 70,
-        HalfPrice: 120,
-        FullPrice: 240
+        QuarterPrice: 80,
+        HalfPrice: 150,
+        FullPrice: 300
     }
 ]
 export const RotiMenuList = [
