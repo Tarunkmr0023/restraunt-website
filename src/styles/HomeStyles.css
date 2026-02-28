@@ -10,6 +10,46 @@
     position: relative;
 }
 
+/* Delivery Note */
+.deliveryNote {
+  margin-top: 25px;
+  background-color: #e23744;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  box-shadow: 0 0 12px rgba(226, 55, 68, 0.6);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  animation: pulseGlow 2.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px rgba(226,55,68,0.6); }
+  50% { box-shadow: 0 0 18px rgba(226,55,68,0.9); }
+  100% { box-shadow: 0 0 10px rgba(226,55,68,0.6); }
+}
+
+/* Hover Animation */
+.deliveryNote:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 20px rgba(226, 55, 68, 0.9);
+  background-color: #c81d2c;
+}
+
+/* Phone link styling */
+.deliveryNote a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+.deliveryNote a:hover {
+  text-decoration: underline;
+}
+
 .overlay {
   background: rgba(0, 0, 0, 0.6);
   height: 100%;

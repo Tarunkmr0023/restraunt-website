@@ -14,13 +14,51 @@ import {
 const Menu = () => {
   return (
     <Layout>
+
+      {/* Delivery Note Section */}
+      {/* Premium Floating Delivery Note */}
+      <Box
+        sx={{
+          textAlign: "center",
+          mt: 4,
+          mb: 4,
+          px: 2,
+        }}
+      >
+        <Box
+          component="a"
+          href="tel:9711893786"
+          sx={{
+            textDecoration: "none",
+            background: "linear-gradient(135deg, #e23744, #ff4d4d)",
+            color: "white",
+            py: 1.5,
+            px: 3,
+            borderRadius: "40px",
+            fontWeight: "bold",
+            fontSize: { xs: "0.9rem", sm: "1rem" },
+            boxShadow: "0 0 15px rgba(226,55,68,0.6)",
+            display: "inline-block",
+            transition: "all 0.3s ease-in-out",
+            animation: "floatPulse 3s ease-in-out infinite",
+            "&:hover": {
+              transform: "translateY(-6px) scale(1.05)",
+              boxShadow: "0 0 25px rgba(226,55,68,0.9)",
+            },
+          }}
+        >
+          🚚 Free Home Delivery upto 1 KM | Minimum Order ₹250 | Call: 9711893786
+        </Box>
+      </Box>
+
+      {/* Menu Cards Section */}
       <Box
         sx={{
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
           gap: 3,
-          mt: 4,
+          mt: 2,
           mb: 4,
           px: { xs: 2, sm: 0 },
         }}
@@ -58,10 +96,7 @@ const Menu = () => {
               />
 
               <CardContent sx={{ flexGrow: 1 }}>
-                <Typography
-                  variant="h6"
-                  sx={{ fontWeight: "bold", mb: 1 }}
-                >
+                <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
                   {menu.name}
                 </Typography>
 
@@ -74,7 +109,6 @@ const Menu = () => {
 
                 <Divider sx={{ mb: 1 }} />
 
-                {/* Styled Prices */}
                 <Box
                   sx={{
                     display: "flex",
@@ -131,10 +165,7 @@ const Menu = () => {
               />
 
               <CardContent sx={{ flexGrow: 1 }}>
-                <Typography
-                  variant="h6"
-                  sx={{ fontWeight: "bold", mb: 1 }}
-                >
+                <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
                   {menu.name}
                 </Typography>
 
@@ -147,7 +178,6 @@ const Menu = () => {
 
                 <Divider sx={{ mb: 1 }} />
 
-                {/* Styled Price */}
                 <Typography
                   sx={{
                     fontWeight: "bold",
