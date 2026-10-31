@@ -1,160 +1,44 @@
 import React, { useState } from "react";
-import {
-  AppBar,
-  Box,
-  Typography,
-  Toolbar,
-  IconButton,
-  Drawer,
-  Divider,
-} from "@mui/material";
-import FastfoodIcon from "@mui/icons-material/Fastfood";
+import { NavLink, Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
-import { NavLink } from "react-router-dom";
-import "../../styles/HeaderStyles.css";
+import CloseIcon from "@mui/icons-material/Close";
+import { BUSINESS } from "../../data/business";
+
+const links = [
+  ["/", "Home"],
+  ["/menu", "Menu"],
+  ["/about", "Our Story"],
+  ["/contact", "Find Us"],
+];
 
 const Header = () => {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
-  const navLinkClass = ({ isActive }) =>
-    isActive ? "nav-link active" : "nav-link";
-
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography
-        variant="h6"
-        sx={{
-          my: 2,
-          fontWeight: "bold",
-          color: "goldenrod",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 1,
-        }}
-      >
-        <FastfoodIcon />
-        Chicken Point
-      </Typography>
-
-      <Divider />
-
-      <ul className="mobile-navigation">
-        <li>
-          <NavLink to="/" className={navLinkClass}>
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/menu" className={navLinkClass}>
-            Menu
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/about" className={navLinkClass}>
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact" className={navLinkClass}>
-            Contact
-          </NavLink>
-        </li>
-      </ul>
-    </Box>
-  );
+  const [open, setOpen] = useState(false);
+  const cls = ({ isActive }) => (isActive ? "nav-link active" : "nav-link");
 
   return (
-    <Box>
-          <AppBar
-            component="nav"
-            sx={{
-              bgcolor: "black",
-              borderBottom: "2px solid goldenrod",
-              boxShadow: "0 2px 10px rgba(218,165,32,0.4)",
-            }}
-          >
-        <Toolbar>
+    <header className="site-header">
+      <div className="container header-inner">
+        <Link to="/" className="brand" onClick={() => setOpen(false)}>
+          <img src="/logo.svg" alt="" />
+          <span>Chicken <b>Point</b></span>
+        </Link>
 
-          {/* Mobile Menu Button */}
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
+        <button className="burger" aria-label="Toggle menu" onClick={() => setOpen(!open)}>
+          {open ? <CloseIcon /> : <MenuIcon />}
+        </button>
 
-          {/* Logo */}
-          <Typography
-            variant="h6"
-            sx={{
-              flexGrow: 1,
-              fontWeight: "bold",
-              color: "goldenrod",
-              display: "flex",
-              alignItems: "center",
-              gap: 1,
-            }}
-          >
-            <FastfoodIcon />
-            Chicken Point
-          </Typography>
-
-          {/* Desktop Navigation */}
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <ul className="navigation-menu">
-              <li>
-                <NavLink to="/" className={navLinkClass}>
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/menu" className={navLinkClass}>
-                  Menu
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/about" className={navLinkClass}>
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact" className={navLinkClass}>
-                  Contact
-                </NavLink>
-              </li>
-            </ul>
-          </Box>
-        </Toolbar>
-      </AppBar>
-
-      {/* Mobile Drawer */}
-      <Box component="nav">
-        <Drawer
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              width: "60%",
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-
-      {/* Toolbar Spacer */}
-      <Toolbar />
-    </Box>
+        <nav className={open ? "nav open" : "nav"} onClick={() => setOpen(false)}>
+          {links.map(([to, label]) => (
+            <NavLink key={to} to={to} end={to === "/"} className={cls}>
+              {label}
+            </NavLink>
+          ))}
+          <a className="btn btn-flame btn-sm" href={BUSINESS.zomato} target="_blank" rel="noopener noreferrer">
+            Order on Zomato
+          </a>
+        </nav>
+      </div>
+    </header>
   );
 };
 
