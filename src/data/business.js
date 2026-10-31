@@ -4,7 +4,7 @@ export const BUSINESS = {
   primaryPhone: "9711893786",
   whatsapp: "919711893786",
   zomato: "https://www.zomato.com/ncr/chicken-point-1-karawal-nagar-new-delhi/order",
-  maps: "https://maps.app.goo.gl/NkZuQC8YATq42a547",
+  maps: "https://maps.app.goo.gl/x4tkBBn8jASXkkuM6",
   address: "Main Shiv Vihar Tiraha, Near Anil Sweets, Shiv Vihar, Karawal Nagar, Delhi - 110094",
   hoursLabel: "6 PM to 11 PM, Wednesday to Monday (closed Tuesdays)",
   openHour: 18,
