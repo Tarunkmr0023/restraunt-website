@@ -1,165 +1,50 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-import {
-  Box,
-  Typography,
-  Paper,
-} from "@mui/material";
-import HomeIcon from "@mui/icons-material/Home";
+import { BUSINESS, waLink } from "../data/business";
 import CallIcon from "@mui/icons-material/Call";
-import MapIcon from "@mui/icons-material/Map";
+import PlaceIcon from "@mui/icons-material/Place";
+import ScheduleIcon from "@mui/icons-material/Schedule";
 
-const Contact = () => {
-  return (
-    <Layout>
-      {/* Heading Section */}
-      <Box
-        sx={{
-          textAlign: "center",
-          mt: 8,
-        }}
-      >
-        <Typography
-          variant="h4"
-          sx={{
-            fontWeight: "bold",
-            display: "inline-block",
-          }}
-        >
-          Contact Our Restaurant
-        </Typography>
+const Contact = () => (
+  <Layout>
+    <div className="page-head-wrap">
+      <div className="container page-head">
+        <h1>Find Us</h1>
+        <p>Call, WhatsApp or walk in. We are open {BUSINESS.hoursLabel}.</p>
+      </div>
+    </div>
 
-        {/* Underline */}
-        <Box
-          sx={{
-            width: "70px",
-            height: "4px",
-            backgroundColor: "#e23744",
-            mx: "auto",
-            mt: 1,
-            borderRadius: 2,
-          }}
-        />
-      </Box>
-
-      {/* Contact Cards Section */}
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: { xs: "column", md: "row" },
-          justifyContent: "center",
-          gap: 4,
-          my: 6,
-          px: 3,
-        }}
-      >
-        {/* Call Card */}
-        <Paper
-          elevation={4}
-          sx={{
-            p: 4,
-            flex: 1,
-            textAlign: "center",
-            borderRadius: 3,
-            transition: "0.3s",
-            "&:hover": {
-              transform: "translateY(-8px)",
-              boxShadow: 8,
-            },
-          }}
-        >
-          <CallIcon sx={{ fontSize: 45, color: "green", mb: 2 }} />
-          <Typography variant="h6" fontWeight="bold" mb={1}>
-            Call Us
-          </Typography>
-          <Typography>9211598030</Typography>
-          <Typography>9990417352</Typography>
-          <Typography>9711893786</Typography>
-        </Paper>
-
-        {/* Address Card */}
-        <Paper
-          elevation={4}
-          sx={{
-            p: 4,
-            flex: 1,
-            textAlign: "center",
-            borderRadius: 3,
-            transition: "0.3s",
-            "&:hover": {
-              transform: "translateY(-8px)",
-              boxShadow: 8,
-            },
-          }}
-        >
-          <HomeIcon sx={{ fontSize: 45, color: "red", mb: 2 }} />
-          <Typography variant="h6" fontWeight="bold" mb={1}>
-            Our Address
-          </Typography>
-          <Typography>
-            Main Shiv Vihar Tiraha, Near Anil Sweets,
-            Shiv Vihar, Karawal Nagar, Delhi - 110094
-          </Typography>
-        </Paper>
-
-        {/* Map Card */}
-        <Paper
-          elevation={4}
-          sx={{
-            p: 4,
-            flex: 1,
-            textAlign: "center",
-            borderRadius: 3,
-            transition: "0.3s",
-            "&:hover": {
-              transform: "translateY(-8px)",
-              boxShadow: 8,
-            },
-          }}
-        >
-          <MapIcon sx={{ fontSize: 45, color: "skyblue", mb: 2 }} />
-          <Typography variant="h6" fontWeight="bold" mb={1}>
-            Find Us
-          </Typography>
-          <a
-            href="https://maps.app.goo.gl/NkZuQC8YATq42a547"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              textDecoration: "none",
-              color: "#e23744",
-              fontWeight: "bold",
-              fontSize: "16px",
-            }}
-          >
-            View on Google Maps
-          </a>
-        </Paper>
-      </Box>
-
-      {/* Embedded Google Map */}
-      <Box
-        sx={{
-          px: { xs: 2, md: 10 },
-          mb: 8,
-        }}
-      >
+    <section className="section">
+      <div className="container visit">
+        <div>
+          <ul className="info-list">
+            <li><PlaceIcon /><div><small>Address</small>{BUSINESS.address}</div></li>
+            <li><ScheduleIcon /><div><small>Hours</small>{BUSINESS.hoursLabel}</div></li>
+            <li>
+              <CallIcon />
+              <div>
+                <small>Call</small>
+                {BUSINESS.phones.map((p) => (
+                  <div key={p}><a href={`tel:${p}`}>{p}</a></div>
+                ))}
+              </div>
+            </li>
+          </ul>
+          <div className="hero-actions">
+            <a className="btn btn-wa" href={waLink("Hi Chicken Point!")} target="_blank" rel="noopener noreferrer">WhatsApp us</a>
+            <a className="btn btn-flame" href={BUSINESS.maps} target="_blank" rel="noopener noreferrer">Get directions</a>
+          </div>
+        </div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.0373860082614!2d77.2788534!3d28.718428699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdfb9b86d735%3A0x873b4129a1d6fed6!2sChicken%20Point!5e0!3m2!1sen!2sin!4v1772124248308!5m2!1sen!2sin"
-          width="100%"
-          height="350"
-          style={{
-            border: 0,
-            borderRadius: "15px",
-          }}
-          allowFullScreen=""
+          className="map-frame"
+          title="Chicken Point location"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Chicken Point Location"
-        ></iframe>
-       </Box>
-    </Layout>
-  );
-};
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.0373860082614!2d77.2788534!3d28.718428699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdfb9b86d735%3A0x873b4129a1d6fed6!2sChicken%20Point!5e0!3m2!1sen!2sin!4v1772124248308!5m2!1sen!2sin"
+        />
+      </div>
+    </section>
+  </Layout>
+);
 
 export default Contact;

@@ -7,69 +7,90 @@ import EggCurry from '../images/EggCurry.jpg'
 import TandooriRoti from '../images/TandooriRoti.jpg'
 import ChickenSeekhKebab from '../images/ChickenSeekhKebab.jpg'
 
+export const CATEGORIES = ['All', 'Tandoor & Kebabs', 'Curries', 'Fried', 'Breads']
+
 export const MenuList = [
     {
+        name: 'Chicken Tandoori',
+        category: 'Tandoor & Kebabs',
+        tag: 'Bestseller',
+        description: "Yogurt-marinated, charcoal-roasted in the tandoor. Smoky outside, juicy inside. Served with laccha onion and mint chutney.",
+        image: ChickenTandoori,
+        QuarterPrice: 150,
+        HalfPrice: 300,
+        FullPrice: 600
+    },
+    {
         name: 'Butter Chicken',
-        description: "A type of curry made from chicken with a spiced tomato and butter (makhan) sauce",
+        category: 'Curries',
+        tag: 'Bestseller',
+        description: "Tender chicken in a silky tomato and makhan gravy. Rich, mild and made for tandoori roti.",
         image: ButterChicken,
-        QuarterPrice: 180,
-        HalfPrice: 350,
-        FullPrice: 700
+        QuarterPrice: 200,
+        HalfPrice: 400,
+        FullPrice: 800
+    },
+    {
+        name: 'Chicken Tikka',
+        category: 'Tandoor & Kebabs',
+        tag: 'Chef Pick',
+        description: "Boneless chicken marinated in dahi and spices, grilled over charcoal until just charred.",
+        image: ChickenTikka,
+        QuarterPrice: 200,
+        HalfPrice: 400,
+        FullPrice: 800
     },
     {
         name: 'Chicken Changezi',
-        description: "Chicken Changezi is a delicious and aromatic curry that hails from the culinary traditions of the Mughal era in India",
+        category: 'Curries',
+        tag: 'Spicy',
+        description: "Mughlai-style curry with a thick, aromatic masala. Bold and full of flavour.",
         image: ChickenChangezi,
-        QuarterPrice: 160,
-        HalfPrice: 320,
-        FullPrice: 620
+        QuarterPrice: 180,
+        HalfPrice: 360,
+        FullPrice: 720
     },
     {
-        name: 'Chicken Fry',
-        description: "A dish consisting of chicken pieces that have been coated with seasoned flour or batter and pan-fried, deep fried, pressure fried, or air fried",
-        image: ChickenFry,
-        QuarterPrice: 110,
+        name: 'Chicken Seekh Kebab',
+        category: 'Tandoor & Kebabs',
+        tag: '',
+        description: "Spiced minced chicken shaped on skewers and grilled. Soft, smoky and great as a starter.",
+        image: ChickenSeekhKebab,
+        QuarterPrice: 100,
         HalfPrice: 200,
         FullPrice: 400
     },
     {
-        name: 'Chicken Tandoori',
-        description: "A dish made from chicken marinated in yogurt and spices and roasted in a tandoor, a cylindrical clay oven",
-        image: ChickenTandoori,
+        name: 'Chicken Fry',
+        category: 'Fried',
+        tag: 'Crunchy',
+        description: "Seasoned chicken pieces fried golden and crisp. Hot, crunchy and juicy.",
+        image: ChickenFry,
         QuarterPrice: 130,
-        HalfPrice: 250,
-        FullPrice: 500
-    },
-    {
-        name: 'Chicken Tikka',
-        description: "Small pieces of boneless chicken baked using skewers on a brazier called angeethi or over charcoal after marinating in Indian spices and dahi (yogurt)",
-        image: ChickenTikka,
-        QuarterPrice: 180,
-        HalfPrice: 350,
-        FullPrice: 700
-    },
-    {
-        name: 'Chicken Seekh Kebab',
-        description: "Type of kebab, native to the Indian subcontinent, made with Indian spices, spiced minced or ground meat, usually chicken, formed into cylinders on skewers and grilled",
-        image: ChickenSeekhKebab,
-        QuarterPrice: 70,
-        HalfPrice: 120,
-        FullPrice: 240
+        HalfPrice: 260,
+        FullPrice: 520
     },
     {
         name: 'Egg Curry',
-        description: "Egg curry is a comforting Indian dish of curried eggs, basically made with hard boiled eggs, onions, tomatoes, whole & ground spices and herbs",
+        category: 'Curries',
+        tag: '',
+        description: "Boiled eggs in an onion-tomato masala with whole spices. Simple, comforting ghar-style curry.",
         image: EggCurry,
-        QuarterPrice: 80,
-        HalfPrice: 150,
-        FullPrice: 300
+        QuarterPrice: 100,
+        HalfPrice: 200,
+        FullPrice: 400
     }
 ]
+
 export const RotiMenuList = [
     {
         name: 'Tandoori Roti',
-        description: "A restaurant popular flatbread made with whole wheat flour",
+        category: 'Breads',
+        description: "Whole wheat flatbread baked fresh in the tandoor.",
         image: TandooriRoti,
-        price: 8
+        price: 10
     }
 ]
+
+// Add only genuine customer reviews here; the section stays hidden while this is empty.
+export const REVIEWS = []
